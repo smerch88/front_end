@@ -42,32 +42,6 @@ console.log("Strings Concatenated : ", user_string_1 + user_string_2 + user_stri
 alert("5. Enter the Five-digit Number : ");
 
 const five_digit_value = Number(prompt("Enter the Five-digit Number : "));
-let number_part_1 = null;
-let number_part_2 = null;
-let number_part_3 = null;
-let number_part_4 = null;
-let number_part_5 = null;
-
-function last_number(number) {
-    while (number>10){
-        number = number % 10;
-    }
-    return number;
-};
-
-number_part_5 = last_number(five_digit_value);
-number_part_4 = last_number((five_digit_value-number_part_5)/10);
-number_part_3 = last_number(((five_digit_value-number_part_5)/10-number_part_4)/10);
-number_part_2 = last_number((((five_digit_value-number_part_5)/10-number_part_4)/10-number_part_3)/10);
-number_part_1 = last_number(((((five_digit_value-number_part_5)/10-number_part_4)/10-number_part_3)/10-number_part_2)/10);
-
-console.log("The Number is : ", number_part_1, " ", number_part_2, " ", number_part_3, " ", number_part_4, " ", number_part_5);
-
-// Адекватный вариант пятого задания.
-
-console.log("Task 5 variant 2 : ");
-
 let str = String(five_digit_value);
-console.log(str[0], " ", str[1], " ", str[2], " ", str[3], " ", str[4]);
 
-
+console.log(str.split("").join(" "));
