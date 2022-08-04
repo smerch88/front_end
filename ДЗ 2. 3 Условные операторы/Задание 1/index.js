@@ -3,7 +3,7 @@
 // Есть ли среди цифр цифры одинаковые? ‘332’ ‘233’ ‘323’
 
 
-const variable_1 = parseInt(prompt("Enter a number"));
+const variable_1 = parseInt(prompt("Enter a 3-digit number"));
 let first_digit_var;
 let second_digit_var;
 let third_digit_var;
