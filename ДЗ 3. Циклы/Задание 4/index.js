@@ -13,10 +13,10 @@ for (let j = 0; j <= (Math.ceil(number_var / 2)); j++) {
 
 
 console.log("Debug: Math.ceil(number_var/2) ", Math.ceil(number_var / 2))
-console.log("Debug: i = ", counter)
+console.log("Debug: counter = ", counter)
 
 
-if (counter == 1) {
+if (counter == 1 && number_var != 1) {
     console.log("Number is Prime")
 }
 else {
