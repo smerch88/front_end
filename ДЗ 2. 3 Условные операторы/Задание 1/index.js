@@ -14,7 +14,7 @@ first_digit_var = (variable_1 - variable_1 % 100) / 100;
 
 console.log(first_digit_var, second_digit_var, third_digit_var)
 
-if (first_digit_var == second_digit_var == third_digit_var) {    
+if (first_digit_var == second_digit_var && second_digit_var == third_digit_var) {    
     console.log("All digits of a number are equal.");
 }
 else if (first_digit_var == second_digit_var && first_digit_var != third_digit_var){
