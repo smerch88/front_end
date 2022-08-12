@@ -58,7 +58,15 @@ function numberOfNegativeFunction(array){     //Определить колич�
     return counter;
 }
 
-function numberOfPositiveOddsFunction(array){     // Найти сумму четных положительных элементов.
+function numberOfPositiveOddsFunction(array){     // Найти количество нечетных положительных элементов.
+    let counter = 0;
+    for (let i = 0; i < array.length; i++){
+        array[i] > 0 && array[i]%2 != 0 ? counter += 1 : counter;
+    }
+    return counter;
+}
+
+function sumOfPositiveEvensFunction(array){     // Найти сумму четных положительных элементов.
     let sum = 0;
     for (let i = 0; i < array.length; i++){
         array[i] >= 0 && array[i]%2 === 0 ? sum += array[i] : sum;
@@ -69,7 +77,7 @@ function numberOfPositiveOddsFunction(array){     // Найти сумму че�
 function multiplyPositiveFunction(array){     // Найти произведение положительных элементов.
     let multiply = 1;
     for (let i = 0; i < array.length; i++){
-        array[i] >= 0 ? multiply *= array[i] : multiply;
+        array[i] > 0 ? multiply *= array[i] : multiply;
     }
     return multiply;
 }
@@ -92,23 +100,26 @@ function biggestElementFunction(array){     // Найти самый больш�
 sortedArray = sortArrayMinToMax(numbersArray);
 console.log(`Sorted array: ${sortedArray}`);
 
-sumOfPositive = sumOfPositiveFunction(numbersArray);
+sumOfPositive = sumOfPositiveFunction(numbersArray); //
 console.log(`Sum of positive values: ${sumOfPositive}`);
 
-minElement = minElementFunction(numbersArray);
+minElement = minElementFunction(numbersArray);//
 console.log(`Minimal value and its number: ${minElement}`);
 
-maxElement = maxElementFunction(numbersArray);
+maxElement = maxElementFunction(numbersArray);//
 console.log(`Maximal value and its number: ${maxElement}`);
 
-numberOfNegative = numberOfNegativeFunction(numbersArray);
+numberOfNegative = numberOfNegativeFunction(numbersArray);//
 console.log(`Number of negative values: ${numberOfNegative}`);
 
 numberOfPositiveOdds = numberOfPositiveOddsFunction(numbersArray);
-console.log(`Sum of positive odds: ${numberOfPositiveOdds}`);
+console.log(`Number of positive odds: ${numberOfPositiveOdds}`);
 
-multiplyPositive = multiplyPositiveFunction(numbersArray);
+sumOfPositiveEvens = sumOfPositiveEvensFunction(numbersArray); //
+console.log(`Sum of positive evens: ${sumOfPositiveEvens}`);
+
+multiplyPositive = multiplyPositiveFunction(numbersArray);//
 console.log(`Multiply of positive values: ${multiplyPositive}`);
 
 biggestElement = biggestElementFunction(numbersArray);
-console.log(`Biggest value: ${biggestElement}`);
+console.log(`Biggest value: ${biggestElement}`);//
