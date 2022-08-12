@@ -105,7 +105,7 @@ numberOfNegative = numberOfNegativeFunction(numbersArray);
 console.log(`Number of negative values: ${numberOfNegative}`);
 
 numberOfPositiveOdds = numberOfPositiveOddsFunction(numbersArray);
-console.log(`Number of positive odds: ${numberOfPositiveOdds}`);
+console.log(`Sum of positive odds: ${numberOfPositiveOdds}`);
 
 multiplyPositive = multiplyPositiveFunction(numbersArray);
 console.log(`Multiply of positive values: ${multiplyPositive}`);
