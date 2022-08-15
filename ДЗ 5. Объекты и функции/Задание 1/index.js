@@ -1,40 +1,75 @@
-// 1. Создать массив, длину и элементы которого задает пользователь (через
+// 1 Дан массив объектов. Вывести массив телефонных номеров пользователей у которых баланс больше 2000 долларов. Вывести сумму балансов всех пользователей.
 
-//     prompt) (повторяется промпт, пока пользователь не нажмет кэнсэл). Затем отсортировать массив по росту. Затем, удалить
-    
-//     элементы из массива со 2 по 4. По мере изменений выводить содержимое массива в консоль.
+const userData = [
+  {
+    index: 0,
+    isActive: true,
+    name: "John Doe",
+    balance: "$2,226.60",
+    phone: "+1 (840) 583-3207",
+  },
+  {
+    index: 1,
+    isActive: true,
+    name: "Merry Hope",
+    balance: "$2,778.05",
+    phone: "+1 (856) 599-3450",
+  },
+  {
+    index: 2,
+    isActive: true,
+    name: "Eugene Stakidis",
+    balance: "$730.10",
+    phone: "+1 (840) 333-5400",
+  },
+  {
+    index: 2,
+    isActive: true,
+    name: "Stan Smith",
+    balance: "$5,001.50",
+    phone: "+1 (839) 121-3044",
+  },
+  {
+    index: 3,
+    isActive: true,
+    name: "Johnatan Tape",
+    balance: "$3,020.60",
+    phone: "+1 (839) 003-5579",
+  },
+  {
+    index: 4,
+    isActive: true,
+    name: "Aaron Big",
+    balance: "$1,999.99",
+    phone: "+1 (840) 033-6873",
+  },
+  {
+    index: 5,
+    isActive: true,
+    name: "Artur Cheese",
+    balance: "$2,545.00",
+    phone: "+1 (840) 562-3790",
+  },
+];
 
 
+const bal = userData.filter(function (dataItem){
+    dataItem.balance = dataItem.balance.replace(',','');
+    dataItem.balance = dataItem.balance.slice(1, dataItem.balance.length);
+    return dataItem.balance > 2000.00;
+})
 
-let flag = true;
-let numbersSet = [];
+let numbers2000 = [];
 
-
-while (flag){
-    number = prompt();
-    flag = (number == null) ? false : true;  
-    if (flag === false){       // вынужден был сделать так потому что не работает Брейк в тернарном операторе
-        break;
-    }
-    numbersSet.push(number);
-    console.log(number);
+for(let i = 0; i < bal.length; i++){
+    numbers2000.push(bal[i].phone);
 }
 
+console.log(`Numbers of all balances > 2000: ${numbers2000}`);
 
-console.log(`Debug message: Записанный массив с клавиатуры: ${numbersSet}`);
+let sum = 0;
+for(let i = 0; i < bal.length; i++){
+   sum += parseInt(bal[i].balance*100);
+}
 
-
-function compareNumeric(a, b) {  //функция для sort
-    if (a > b) return 1;
-    if (a == b) return 0; 
-    if (a < b) return -1; 
-   }
-
-numbersSet.sort(compareNumeric);
-
-console.log(`Debug message: Сортированный массив: ${numbersSet}`);
-
-numbersSet.splice(1,3);
-
-console.log(`Debug message: Удалены елементы с индексами от 1 до 3 включительно. Массив: ${numbersSet}`);
-
+console.log(`Sum of all balances: $${sum/100}`);
