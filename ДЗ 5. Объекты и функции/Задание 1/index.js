@@ -59,34 +59,22 @@ const bal = userData.filter(function (dataItem){
     return dataItem.balance > 2000.00;
 })
 
+
 let numbers2000 = [];
+
 
 for(let i = 0; i < bal.length; i++){
     numbers2000.push(String(bal[i].phone));
-    console.log(numbers2000)
 }
 
-// let array1 = Object.keys(numbers2000)
-//     .map(function(key) {
-//         return numbers2000[key];
-//     });
 
-// console.log('typeof numbers2000: ', typeof(numbers2000))
 console.log(`Numbers of all balances > 2000: ${numbers2000}`);
-// console.log('typeof array: ', typeof(array1))
-// console.log(array1);
+
 
 let sum = 0;
 for(let i = 0; i < userData.length; i++){
    sum += parseInt(userData[i].balance*100);
 }
 
+
 console.log(`Sum of all balances: $${sum/100}`);
-
-
-
-// let arraytest=[];
-// arraytest.push(bal[1].phone);
-// console.log('Debug: typeof(bal[1].phone: ',typeof(bal[1].phone))
-// console.log('Debug: arraytest',arraytest)
-// console.log('Debug: typeof(arraytest): ',typeof(arraytest))
