@@ -17,7 +17,7 @@ function User() {
 
 function Car(user) {
     if (user.age >= 18){
-        this.owner = user.name;
+        this.user = user;
         this.brand = empyFieldStr("Brand name:");
         this.year = empyFieldStr("Car year:");
         this.tires = empyFieldStr("Tires:");
