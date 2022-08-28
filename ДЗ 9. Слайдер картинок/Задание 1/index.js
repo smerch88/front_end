@@ -16,25 +16,29 @@ const prevButton = document.querySelector(".prev-image");
 const nextButton = document.querySelector(".next-image");
 const imageStyle = "style-img";
 
-let i = 1;
-nextButton.addEventListener("click", function () {
-  console.log("'Next' button pressed");
-  if ((i += 1) == 11) {
-    i = 1;
-  }
-  console.log(i);
-  document.querySelector(
-    ".content-img"
-  ).innerHTML = `<img src="./images/${i}.png" alt="img ${i}" class ="${imageStyle}"/>`;
-});
+function slider(maxImg) {
+  let i = 1;
+  nextButton.addEventListener("click", function () {
+    console.log("'Next' button pressed");
+    if ((i += 1) == maxImg + 1) {
+      i = 1;
+    }
+    console.log(i);
+    document.querySelector(
+      ".content-img"
+    ).innerHTML = `<img src="./images/${i}.png" alt="img ${i}" class ="${imageStyle}"/>`;
+  });
 
-prevButton.addEventListener("click", function () {
-  console.log("'Previous' button pressed");
-  if ((i -= 1) == 0) {
-    i = 10;
-  }
-  console.log(i);
-  document.querySelector(
-    ".content-img"
-  ).innerHTML = `<img src="./images/${i}.png" alt="img ${i}" class ="${imageStyle}"/>`;
-});
+  prevButton.addEventListener("click", function () {
+    console.log("'Previous' button pressed");
+    if ((i -= 1) == 0) {
+      i = maxImg;
+    }
+    console.log(i);
+    document.querySelector(
+      ".content-img"
+    ).innerHTML = `<img src="./images/${i}.png" alt="img ${i}" class ="${imageStyle}"/>`;
+  });
+}
+
+slider(10);
