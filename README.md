@@ -1,3 +1,3 @@
-# hillel_fron_end
+# front_end
 
-My homeworks. Hillel Front End Pro Courses.
+My homeworks. Front End Pro Courses.
