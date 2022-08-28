@@ -1,6 +1,6 @@
 // Вывести таблицу 10×10, заполненную числами от 1 до 100 (таблица создана динамически)
 
-function createMatrix(rows, cols) {
+function createMatrix() {
   const matrix = [];
 
   for (let i = 0; i < 10; i++) {
@@ -18,17 +18,17 @@ document.querySelector("body").insertAdjacentHTML(
   "beforeend",
   `
     <table>${createMatrix()
-      .map(
-        (n) => `
+    .map(
+      (n) => `
       <tr>${n
-        .map(
-          (m) => `
+          .map(
+            (m) => `
         <td>${m}</td>`
-        )
-        .join("")}
+          )
+          .join("")}
       </tr>`
-      )
-      .join("")}
+    )
+    .join("")}
     </table>
   `
 );

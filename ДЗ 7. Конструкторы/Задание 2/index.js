@@ -13,10 +13,10 @@ function User() {
     this.name = prompt("Your name?", "Enter name here");
     this.age = prompt("Your age?", 18);
 }
-  
+
 
 function Car(user) {
-    if (user.age >= 18){
+    if (user.age >= 18) {
         this.user = user;
         this.brand = empyFieldStr("Brand name:");
         this.year = empyFieldStr("Car year:");
@@ -30,26 +30,26 @@ function Car(user) {
 let user = new User();
 let car = new Car(user);
 
-  
-function showData(userName){
+
+function showData(userName) {
     console.log("______________________")
-    for (item in userName){
-        if (userName[item]!==null && userName[item]!==false){
-        console.log(item, ":" ,userName[item]);
+    for (item in userName) {
+        if (userName[item] !== null && userName[item] !== false) {
+            console.log(item, ":", userName[item]);
         }
     }
     console.log("______________________")
 }
 
 
-function empyFieldStr(msg){
+function empyFieldStr(msg) {
     let text;
     do {
         text = prompt(msg);
-        if (text === null ){
+        if (text === null) {
             text = false;
         };
-      } while (text.length === 0);
+    } while (text.length === 0);
     return text;
 };
 
