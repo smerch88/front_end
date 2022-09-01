@@ -8,8 +8,7 @@ body {
 }
 
 form,
-p,
-button {
+p {
     background-color: wheat;
     padding: 10px 10px;
     border-radius: 8px;
@@ -18,8 +17,9 @@ button {
 }
 
 button {
-    margin-top: 15px;
+    margin-top: 4px;
     background-color: whitesmoke;
     padding: 3px 3px;
     width: 100px;
+    border-radius: 8px;
 }
