@@ -28,21 +28,26 @@ form.addEventListener("submit", function (event) {
   } else if (this.elements[0].value.length > 20) {
     alert("Your task is too long!");
   } else {
+    let div = document.createElement("div");
+    div.setAttribute("class", "wrapper");
+    document.body.appendChild(div);
+
     text = this.elements[0].value;
     const field = document.createElement("p"); //добавления текста из формы
-    field.setAttribute("class", "");
     field.innerText = text;
-    document.body.appendChild(field);
+    div.appendChild(field);
 
     const checkbox = document.createElement("input"); //добавление чекбокса
     checkbox.setAttribute("type", "checkbox");
     checkbox.setAttribute("name", "checkbox");
-    document.body.appendChild(checkbox);
+    checkbox.setAttribute("class", "checkbox");
+    div.appendChild(checkbox);
 
     const removeBtn = document.createElement("button"); //добавдение кнопки удалить
     removeBtn.setAttribute("id", `btnRemoveTask${i}`);
-    removeBtn.innerText = "Remove Task";
-    document.body.appendChild(removeBtn);
+    removeBtn.setAttribute("class", "removeBtn");
+    removeBtn.innerText = "Remove";
+    div.appendChild(removeBtn);
 
     const btnRemoveTask = document.getElementById(`btnRemoveTask${i}`);
     btnRemoveTask.addEventListener("click", removeField);
@@ -63,6 +68,7 @@ form.addEventListener("submit", function (event) {
       field.remove();
       removeBtn.remove();
       checkbox.remove();
+      div.remove();
     }
   }
 });
