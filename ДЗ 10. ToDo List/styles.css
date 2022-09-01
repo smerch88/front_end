@@ -1,0 +1,25 @@
+body {
+    background-color: lightblue;
+}
+
+
+.line-through {
+    text-decoration: line-through
+}
+
+form,
+p,
+button {
+    background-color: wheat;
+    padding: 10px 10px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+    background-color: whitesmoke;
+    padding: 3px 3px;
+    width: 100px;
+}
