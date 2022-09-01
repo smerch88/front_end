@@ -1,3 +1,18 @@
+// Создать ToDoList
+
+// Инпут – ввод названия задачи.
+
+// Валидация этого поля (поле обязательно).
+
+// При клике на кнопку “добавить/add”, задача появляется под формой,
+
+// если поставить галочку возле задания, то текст перечеркивается.
+
+// <input type="checkbox" value="task-1" />
+// Если забрать галочку то перечеркивание исчезает.
+
+// Возможность удалить задачу[element.remove()]
+
 "use stict";
 
 let text;
@@ -10,6 +25,8 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   if (this.elements[0].value.length === 0) {
     alert("You cant add empty field!");
+  } else if (this.elements[0].value.length > 20) {
+    alert("Your task is too long!");
   } else {
     text = this.elements[0].value;
     const field = document.createElement("p"); //добавления текста из формы
