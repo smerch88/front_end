@@ -55,7 +55,7 @@ form {
 
 .task {
     height: 30px;
-    width: 414px;
+    width: 330px;
 }
 
 #btnAddTask {
@@ -70,4 +70,10 @@ form {
 
 .none {
     display: none;
+}
+
+.select-style {
+    height: 36px;
+    width: 90px;
+
 }
