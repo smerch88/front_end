@@ -99,26 +99,21 @@ function createNode(tagName, attributes) {
   return el;
 }
 
-let a = 0;
 select.addEventListener("change", function () {
   switch (this.value) {
     case "done":
       console.log(this.value);
       for (let i = 0; i < taskArray.length; i++) {
         if (taskArray[i].isDone == false) {
-          console.log(taskArray[i].isDone);
-          console.log(i);
           const element = document.querySelector(`[data-id="${i}"]`);
-          console.log(element);
+
           element.setAttribute("class", "none");
         }
       }
       for (let i = 0; i < taskArray.length; i++) {
         if (taskArray[i].isDone != false) {
-          console.log(taskArray[i].isDone);
-          console.log(i);
           const element = document.querySelector(`[data-id="${i}"]`);
-          console.log(element);
+
           element.setAttribute("class", "wrapper");
         }
       }
@@ -127,19 +122,15 @@ select.addEventListener("change", function () {
       console.log(this.value);
       for (let i = 0; i < taskArray.length; i++) {
         if (taskArray[i].isDone != false) {
-          console.log(taskArray[i].isDone);
-          console.log(i);
           const element = document.querySelector(`[data-id="${i}"]`);
-          console.log(element);
+
           element.setAttribute("class", "none");
         }
       }
       for (let i = 0; i < taskArray.length; i++) {
         if (taskArray[i].isDone == false) {
-          console.log(taskArray[i].isDone);
-          console.log(i);
           const element = document.querySelector(`[data-id="${i}"]`);
-          console.log(element);
+
           element.setAttribute("class", "wrapper");
         }
       }
@@ -147,10 +138,8 @@ select.addEventListener("change", function () {
     case "all":
       console.log(this.value);
       for (let i = 0; i < taskArray.length; i++) {
-        console.log(taskArray[i].isDone);
-        console.log(i);
         const element = document.querySelector(`[data-id="${i}"]`);
-        console.log(element);
+
         element.setAttribute("class", "wrapper");
       }
       break;
