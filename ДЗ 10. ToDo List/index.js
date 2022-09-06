@@ -31,27 +31,14 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  // let div = document.createElement("div");
-  // div.setAttribute("class", "wrapper");
-  // document.body.appendChild(div);
-
   const div = createNode("div", [{ name: "class", value: "wrapper" }]);
   document.body.appendChild(div);
 
   text = this.elements[0].value;
-  // const field = document.createElement("p"); //добавления текста из формы
-  // field.innerText = text;
-  // div.appendChild(field);
 
-  const field = createNode("p", []);
+  const field = createNode("p");
   field.innerText = text;
   div.appendChild(field);
-
-  // const checkbox = document.createElement("input"); //добавление чекбокса
-  // checkbox.setAttribute("type", "checkbox");
-  // checkbox.setAttribute("name", "checkbox");
-  // checkbox.setAttribute("class", "checkbox");
-  // div.appendChild(checkbox);
 
   const checkbox = createNode("input", [
     { name: "type", value: "checkbox" },
@@ -59,12 +46,6 @@ form.addEventListener("submit", function (event) {
     { name: "class", value: "checkbox" },
   ]);
   div.appendChild(checkbox);
-
-  // const removeBtn = document.createElement("button"); //добавдение кнопки удалить
-  // removeBtn.setAttribute("id", `btnRemoveTask${i}`);
-  // removeBtn.setAttribute("class", "removeBtn");
-  // removeBtn.innerText = "Remove";
-  // div.appendChild(removeBtn);
 
   const removeBtn = createNode("button", [
     { name: "id", value: `btnRemoveTask${i}` },
@@ -98,7 +79,7 @@ form.addEventListener("submit", function (event) {
   }
 });
 
-function createNode(tagName, attributes) {
+function createNode(tagName, attributes = []) {
   const el = document.createElement(tagName);
   attributes.forEach(({ name, value }) => {
     el.setAttribute(name, value);
