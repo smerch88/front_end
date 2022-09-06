@@ -42,7 +42,7 @@ form.addEventListener("submit", function (event) {
 
   text = this.elements[0].value;
 
-  const field = createNode("p", []);
+  const field = createNode("p", [{ name: "class", value: "default" }]);
   field.innerText = text;
   div.appendChild(field);
 
@@ -124,34 +124,34 @@ function createNode(tagName, attributes) {
 // }
 
 let select = document.querySelector("#select");
-
 select.addEventListener("change", function () {
-  const wrappers = document.querySelectorAll(".wrapper");
   switch (this.value) {
     case "inProgress":
+      // const pLineThrough = document.querySelectorAll(".line-through");
       console.log(this.value);
-      wrappers.forEach((element) => {
-        if (element.isDone == false) {
-          this.closest(".wrapper").setAttribute("class", "none");
-        } else if (element.isDone == true) {
-          this.closest(".wrapper").setAttribute("class", "wrapper");
-        }
+      document.querySelectorAll(".line-through").forEach((element) => {
+        element.closest(".wrapper").setAttribute("class", "none");
+      });
+      document.querySelectorAll(".default").forEach((element) => {
+        element.closest(".wrapper").setAttribute("class", "wrapper");
       });
       break;
     case "done":
       console.log(this.value);
-      wrappers.forEach((element) => {
-        if (element.isDone == true) {
-          this.closest(".wrapper").setAttribute("class", "none");
-        } else if (element.isDone == false) {
-          this.closest(".wrapper").setAttribute("class", "wrapper");
-        }
+      document.querySelectorAll(".default").forEach((element) => {
+        element.closest(".wrapper").setAttribute("class", "none");
+      });
+      document.querySelectorAll(".line-through").forEach((element) => {
+        element.closest(".wrapper").setAttribute("class", "wrapper");
       });
       break;
     case "all":
       console.log(this.value);
-      wrappers.forEach((element) => {
-        this.closest(".wrapper").setAttribute("class", "wrapper");
+      document.querySelectorAll(".default").forEach((element) => {
+        element.closest(".wrapper").setAttribute("class", "wrapper");
+      });
+      document.querySelectorAll(".line-through").forEach((element) => {
+        element.closest(".wrapper").setAttribute("class", "wrapper");
       });
       break;
   }
