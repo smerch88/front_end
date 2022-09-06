@@ -69,6 +69,6 @@ form {
 }
 
 .none {
-    display: none;
-    /* background-color: red; */
+    /* display: none; */
+    background-color: red;
 }

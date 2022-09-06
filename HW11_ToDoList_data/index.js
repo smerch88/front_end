@@ -99,60 +99,60 @@ function createNode(tagName, attributes) {
   return el;
 }
 
-// function displayTasks() {
-//   const wrappers = document.querySelectorAll(".wrapper");
-//   wrappers.forEach((element) => {
-//     console.log(element.getAttribute("data-id"));
-//     let id = element.getAttribute("data-id");
-//     const task = taskArray.find((taskItem) => taskItem.id == id);
-//     if task.
-//   });
-// }
-
-// switch (event.target.getAttribute("data-filter")) {
-//   case "all":
-//     updateHTML(taskArray.all);
-//     break;
-//   case "inProgress":
-//     updateHTML(taskArray.all);
-//     break;
-//   case "completed":
-//     updateHTML(taskArray.all);
-//     break;
-//   default:
-//     updateHTML(taskArray.all);
-// }
-
-let select = document.querySelector("#select");
+let a = 0;
 select.addEventListener("change", function () {
   switch (this.value) {
-    case "inProgress":
-      // const pLineThrough = document.querySelectorAll(".line-through");
-      console.log(this.value);
-      document.querySelectorAll(".line-through").forEach((element) => {
-        element.closest(".wrapper").setAttribute("class", "none");
-      });
-      document.querySelectorAll(".default").forEach((element) => {
-        element.closest(".wrapper").setAttribute("class", "wrapper");
-      });
-      break;
     case "done":
       console.log(this.value);
-      document.querySelectorAll(".default").forEach((element) => {
-        element.closest(".wrapper").setAttribute("class", "none");
-      });
-      document.querySelectorAll(".line-through").forEach((element) => {
-        element.closest(".wrapper").setAttribute("class", "wrapper");
-      });
+      for (let i = 0; i < taskArray.length; i++) {
+        if (taskArray[i].isDone == false) {
+          console.log(taskArray[i].isDone);
+          console.log(i);
+          const element = document.querySelector(`[data-id="${i}"]`);
+          console.log(element);
+          element.setAttribute("class", "none");
+        }
+      }
+      for (let i = 0; i < taskArray.length; i++) {
+        if (taskArray[i].isDone != false) {
+          console.log(taskArray[i].isDone);
+          console.log(i);
+          const element = document.querySelector(`[data-id="${i}"]`);
+          console.log(element);
+          element.setAttribute("class", "wrapper");
+        }
+      }
+      break;
+    case "inProgress":
+      console.log(this.value);
+      for (let i = 0; i < taskArray.length; i++) {
+        if (taskArray[i].isDone != false) {
+          console.log(taskArray[i].isDone);
+          console.log(i);
+          const element = document.querySelector(`[data-id="${i}"]`);
+          console.log(element);
+          element.setAttribute("class", "none");
+        }
+      }
+      for (let i = 0; i < taskArray.length; i++) {
+        if (taskArray[i].isDone == false) {
+          console.log(taskArray[i].isDone);
+          console.log(i);
+          const element = document.querySelector(`[data-id="${i}"]`);
+          console.log(element);
+          element.setAttribute("class", "wrapper");
+        }
+      }
       break;
     case "all":
       console.log(this.value);
-      document.querySelectorAll(".default").forEach((element) => {
-        element.closest(".wrapper").setAttribute("class", "wrapper");
-      });
-      document.querySelectorAll(".line-through").forEach((element) => {
-        element.closest(".wrapper").setAttribute("class", "wrapper");
-      });
+      for (let i = 0; i < taskArray.length; i++) {
+        console.log(taskArray[i].isDone);
+        console.log(i);
+        const element = document.querySelector(`[data-id="${i}"]`);
+        console.log(element);
+        element.setAttribute("class", "wrapper");
+      }
       break;
   }
 });
