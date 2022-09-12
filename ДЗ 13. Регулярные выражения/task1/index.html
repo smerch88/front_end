@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Regular expressions</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Regular expressions</title>
-  <link rel="stylesheet" href="./styles.css" />
-</head>
+  <body>
+    <form name="formUserData">
+      <input name="name" id="name" /><br />
+      <p id="capitalFormat">имя и фамилия, первая буква большая</p>
 
-<body>
-  <form name="formUserData">
-    <input name="name" id="name" /><br />
-    <p id="capitalFormat">имя и фамилия, первая буква большая</p>
+      <input name="number" id="number" /><br />
+      <p id="numberFormat">номер телефона, формат +380671234567</p>
 
-    <input name="number" id="number" /><br />
-    <p id="numberFormat">номер телефона, формат +380671234567</p>
+      <input name="email" id="email" /><br />
+      <p id="emailFormat">email, формат email</p>
 
-    <input name="email" id="email" /><br />
-    <p id="emailFormat">email, формат email</p>
+      <input name="card" id="card" />
+      <p id="cardFormat">номер карты, 16 цифр</p>
 
-    <input name="card" id="card" />
-    <p id="cardFormat">номер карты, 16 цифр</p>
-
-    <button type="submit">Send</button>
-  </form>
-</body>
-<script src="./index.js"></script>
-
+      <button type="submit">Send</button>
+    </form>
+  </body>
+  <script src="./index.js"></script>
 </html>
