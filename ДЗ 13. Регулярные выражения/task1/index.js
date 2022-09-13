@@ -56,5 +56,13 @@ const form = document.forms["formUserData"];
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  console.log("submitted");
+  if (
+    document.getElementById("capitalFormat").classList.contains("success") &&
+    document.getElementById("numberFormat").classList.contains("success") &&
+    document.getElementById("emailFormat").classList.contains("success") &&
+    document.getElementById("cardFormat").classList.contains("success")
+  ) {
+    return console.log("submitted");
+  }
+  return console.log("denied");
 });
