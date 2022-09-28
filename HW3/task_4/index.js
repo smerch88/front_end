@@ -3,22 +3,18 @@
 const number = parseInt(prompt("Enter a number:"));
 let counter = 0;
 
-
-for (let j = 0; j <= (Math.ceil(number / 2)); j++) {
-    if ((number % j) == 0) {
-        console.log("Debug: number % j = ", number % j)
-        counter += 1;
-    }
+for (let j = 0; j <= Math.ceil(number / 2); j++) {
+  if (number % j == 0) {
+    console.log("Debug: number % j = ", number % j);
+    counter += 1;
+  }
 }
 
-
-console.log("Debug: Math.ceil(number/2) ", Math.ceil(number / 2))
-console.log("Debug: counter = ", counter)
-
+console.log("Debug: Math.ceil(number/2) ", Math.ceil(number / 2));
+console.log("Debug: counter = ", counter);
 
 if (counter == 1 && number != 1) {
-    console.log("Number is Prime")
-}
-else {
-    console.log("Number is not Prime")
+  console.log("Number is Prime");
+} else {
+  console.log("Number is not Prime");
 }
