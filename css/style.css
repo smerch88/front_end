@@ -84,19 +84,16 @@ body {
     width: 500px;
 }
 
-.portfolio-items {
+.hw-items {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    list-style: none;
 }
-
-
 
 .filter-link {
     line-height: 2;
     text-decoration: none;
-    color: var(--headTextColor);
+    color: black;
     letter-spacing: 0.06em;
 }
 
