@@ -1,6 +1,11 @@
+/* * {
+    outline: 1px solid tomato;
+} */
+
 /* Reset Parameters */
 
-ul {
+ul,
+ol {
     list-style: none;
 }
 
@@ -9,7 +14,8 @@ h2,
 h3,
 h4,
 p,
-ul {
+ul,
+ol {
     margin: 0;
     padding: 0;
 }
@@ -32,3 +38,71 @@ body {
 }
 
 /* Style */
+
+.container {
+    /*container for width of all elements */
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.name-title {
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 24px;
+}
+
+.name {
+    color: #fff;
+    background-image: repeating-radial-gradient(circle,
+            purple,
+            purple 10px,
+            #4b026f 10px,
+            #4b026f 20px);
+}
+
+.hw .container {
+    padding-top: 0px;
+}
+
+.hw-header {
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 24px;
+}
+
+.hw-list {
+    padding: 0 24px 24px;
+    margin-bottom: 24px;
+
+    width: 500px;
+}
+
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+}
+
+
+
+.filter-link {
+    line-height: 2;
+    text-decoration: none;
+    color: var(--headTextColor);
+    letter-spacing: 0.06em;
+}
+
+.filter-link:hover,
+.filter-link:focus {
+    display: block;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        0px 1px 1px rgba(0, 0, 0, 0.12);
+}
