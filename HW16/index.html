@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HW16</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <button onclick="togglePopup()">show popup</button>
+
+    <div class="content">
+      <div onclick="togglePopup()" class="close-btn">×</div>
+      <h3>Popup</h3>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est porro
+        numquam vitae esse dolorem, recusandae unde. Delectus mollitia quibusdam
+        voluptates, labore impedit eveniet iusto ducimus expedita. Eveniet
+        perferendis alias nihil.
+      </p>
+    </div>
+
+    <script type="text/javascript">
+      function togglePopup() {
+        $(".content").toggle();
+      }
+    </script>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./index.js"></script>
+</html>
