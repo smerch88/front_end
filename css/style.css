@@ -57,6 +57,9 @@ body {
 }
 
 .name {
+    position: sticky;
+    top: -1px;
+
     color: #fff;
     background-image: repeating-radial-gradient(circle,
             purple,
