@@ -13,8 +13,19 @@ p {
     margin: 0;
     list-style: none;
     padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.user-list .item:not(:last-child) {
+.user-list .item {
     margin-bottom: 16px;
+    border: 1px solid black;
+    padding: 16px;
+    width: 250px;
+    border-radius: 16px;
+}
+
+.hidden {
+    display: none;
 }
