@@ -1,0 +1,31 @@
+body {
+    margin: 16px;
+    line-height: 1.5;
+    color: #212121;
+    font-family: sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.user-list {
+    margin: 0;
+    list-style: none;
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.user-list .item {
+    margin-bottom: 16px;
+    border: 1px solid black;
+    padding: 16px;
+    width: 250px;
+    border-radius: 16px;
+}
+
+.hidden {
+    display: none;
+}
