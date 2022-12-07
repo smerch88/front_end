@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form action="" class="userdata-form">
+        User Data
+        <label for="">
+          <input type="text" required placeholder="name" name="name" />
+        </label>
+        <label for="">
+          <input type="number" required placeholder="age" name="age" />
+        </label>
+        <button type="submit">Add Data</button>
+      </form>
+      <form action="" class="cardata-form">
+        Car Data
+        <label for="">
+          <input type="text" required placeholder="brand" name="brand" />
+        </label>
+        <label for="">
+          <input type="number" required placeholder="year" name="year" />
+        </label>
+        <label for="">
+          <input type="number" required placeholder="HP" name="hp" />
+        </label>
+        <button type="submit">Add Data</button>
+      </form>
+      <form action="" class="give-form">
+        Give Car to Owner
+        <!-- <label for="">
+            <input type="text" required placeholder="name" name="name" />
+          </label>
+          <label for="">
+            <input type="text" required placeholder="brand" name="brand" />
+          </label> -->
+        <button type="submit">Add Data</button>
+      </form>
+      <ul class="user-data"></ul>
+    </main>
+    <script src="./index.js"></script>
+    <script src="./getDataUser.js"></script>
+    <script src="./getDataCar.js"></script>
+    <script src="./giveCar.js"></script>
+    <script src="./render.js"></script>
+  </body>
+</html>
