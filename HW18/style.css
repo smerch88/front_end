@@ -1,0 +1,29 @@
+body {
+    margin: 16px;
+    line-height: 1.5;
+    color: #212121;
+    font-family: sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.weather-list {
+    margin: 0;
+    list-style: none;
+    padding: 24px;
+
+    background: CornflowerBlue;
+    color: white;
+    border-radius: 16px;
+    max-width: 400px;
+}
+
+.weather-list li:not(:last-child) {
+    margin-bottom: 16px;
+}
